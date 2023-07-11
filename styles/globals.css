@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@300&family=Outfit&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-poppins;
+}
+.btn {
+    @apply bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200;
+}
+.card_btn {
+    @apply w-full px-9 py-3 bg-color-primary-dark rounded-md capitalize font-bold hover:bg-color-secondary ease-in duration-200;
+}
+.title {
+    @apply text-3xl md:text-4xl font-bold leading-snug font-outfit;
+}
+.blob1 {
+    @apply w-80 h-80 bg-color-blob absolute top-0 -left-5 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+}
+.blob2 {
+    @apply w-80 h-80 bg-color-secondary absolute bottom-10 right-0 -z-10 blur-2xl opacity-30 overflow-hidden rounded-full;
+}
+.user-text {
+    display: none;
+}
+.user-text.active-text {
+    display: block;
+    animation: moveup 1s linear forwards;
+}
+.user-pic {
+    transition: all 0.2s ease;
+}
+.user-pic.active-pic {
+    border: 2px solid #ff7d3b;
+}
+.bg-color-lila {
+    background-color: #e9deff;
+}
+.bg-color-celeste {
+    background-color: #e0e6ff;
+}
+.bg-color-primario {
+    background-color: #004aad;
+}
+.bg-color-primario-dark {
+    background-color: #103970;
+}
+.bg-color-secundario {
+    background-color: #6165FA;
+}
+.text-color-secundario {
+    color: #6165FA;
+}
+.text-color-espe {
+    color: #147445;
+}
+.border-color-secundario{
+    border-color: 1px solid #5474fc;
+}
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+.move-in {
+    animation: moveIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .75;
+    }
+    75% {
+        opacity: .85;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveIn {
+    0% {
+        transform: translateY(300px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes moveup {
+    0% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+    50% {
+        margin-top: 20px;
+        opacity: 0.1;
+    }
+    100% {
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+.card {
+    perspective: 1000px;
+}
+.front,
+.back {
+    backface-visibility: hidden;
+    transition: all 0.4s ease;
+}
+.front {
+    overflow: hidden;
+}
